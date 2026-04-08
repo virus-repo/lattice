@@ -1,23 +1,14 @@
-[project]
-name = "lattice"
-version = "0.0.1"
-description = "Prompt toolkit python library inspired for HackerScript"
-authors = ["Virus Developers"]
-edition = "2026"
-entry = "src/main.hcs"
-output = "bin"
-license = "MIT"
-repository = "https://github.com/virus-repo/json/"
-keywords = ["virus-io", "virus-repository", "hackerscript"]
+project "lattice" {
+  version     = "0.1.0"
+  description = "Prompt toolkit for H# — inspired by Python's prompt_toolkit"
+  h_sharp     = "0.1"
+  src_dir     = "src"
+}
 
-[build]
-link = "static"
-c_standard = 99
-opt_level = "2"
-lto = true
-strip = false
+dependencies {
+  // brak zewnętrznych zależności
+}
 
-[dependencies]
-
-[cmake]
-min_version = "3.20"
+output {
+  type = "hsl"   // biblioteka H# (.hsl)
+}
